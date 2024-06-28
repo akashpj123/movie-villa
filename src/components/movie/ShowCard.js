@@ -11,7 +11,7 @@ function ShowCard() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/movie/read')
+    axios.get('https://movie-villaback.vercel.app/movie/read')
       .then((res) => {
         setMovies(res.data);
         const storedHiddenButtons = JSON.parse(localStorage.getItem('hiddenButtons')) || {};
@@ -29,7 +29,7 @@ function ShowCard() {
   const deletePost = (id) => {
     const confirm = window.confirm("Are you sure you want to delete this movie?");
     if (confirm) {
-      axios.delete(`http://localhost:3000/movie/deleteMovie/${id}`)
+      axios.delete(`https://movie-villaback.vercel.app/movie/deleteMovie/${id}`)
         .then(() => {
           setMovies(data.filter(movie => movie._id !== id)); // Remove the deleted movie from state
           navigate('/'); // Navigate to the home page after successful deletion

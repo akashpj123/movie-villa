@@ -12,7 +12,7 @@ function Logingust() {
     const [errorMessage, setErrorMessage] = useState('');
 
     function submit() {
-        axios.post('http://localhost:3000/user/login', {
+        axios.post('https://movie-villaback.vercel.app/user/login', {
             email: email,
             password: password
         })

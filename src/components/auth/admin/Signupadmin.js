@@ -19,7 +19,7 @@ function Signupadmin() {
             conform_password: con_pass // Corrected variable name
         };
 		
-        axios.post('http://localhost:3000/admin/sign', user)
+        axios.post('https://movie-villaback.vercel.app/admin/sign', user)
             .then(response => {
                 navigate('/logingust');
             })

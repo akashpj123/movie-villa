@@ -22,7 +22,7 @@ function AddBooking() {
 
         };
 
-        axios.post('http://localhost:3000/movie/upload', formData)
+        axios.post('https://movie-villaback.vercel.app/movie/upload', formData)
             .then(response => {
                 console.log(response.data);
                 Navigate('/');

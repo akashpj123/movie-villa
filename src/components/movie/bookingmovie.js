@@ -14,7 +14,7 @@ function Bookingmovie() {
   const [post, setPost] = useState({ name: '', description: '', posterUrl: '' });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/movie/getMovie/${id}`)
+    axios.get(`https://movie-villaback.vercel.app/movie/getMovie/${id}`)
       .then(res => setPost(res.data))
       .catch(error => console.log(error));
   }, [id]);
@@ -54,7 +54,7 @@ function Bookingmovie() {
       name:post.name
     };
 
-    axios.post('http://localhost:8000/booking/upload', bookingDetails)
+    axios.post('https://movie-villaback.vercel.app/booking/upload', bookingDetails)
       .then(response => {
         console.log('Booking successful:', response.data);
 

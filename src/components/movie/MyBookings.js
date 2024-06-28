@@ -42,7 +42,7 @@ function MyBookings() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/bookings/book');
+        const response = await axios.get('https://movie-villaback.vercel.app/bookings/book');
         const updatedBookings = await Promise.all(response.data.map(async (booking) => {
           try {
             // Generate QR code data
@@ -65,7 +65,7 @@ function MyBookings() {
   const sendEmail = async (bookingId) => {
     try {
       // Send booking details and QR code as an email attachment
-      const response = await axios.post(`http://localhost:3000/bookings/send-email/${bookingId}`);
+      const response = await axios.post(`https://movie-villaback.vercel.app/bookings/send-email/${bookingId}`);
       console.log(response.data); // Log success message
     } catch (error) {
       console.error('Error sending email:', error);

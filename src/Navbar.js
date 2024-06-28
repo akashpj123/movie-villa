@@ -14,7 +14,7 @@ function Navbar() {
   const logoutUser = async () => {
     try {
       if (user) {
-        await axios.post('http://localhost:3000/user/logout', {}, {
+        await axios.post('https://movie-villaback.vercel.app/user/logout', {}, {
           headers: { 'Authorization': `Bearer ${user.token}` }
         });
         dispatch(removeUser());
@@ -28,7 +28,7 @@ function Navbar() {
   const logoutAdmin = async () => {
     try {
       if (admin) {
-        await axios.post('http://localhost:3000/admin/logout', {}, {
+        await axios.post('https://movie-villaback.vercel.app/admin/logout', {}, {
           headers: { 'Authorization': `Bearer ${admin.token}` }
         });
         dispatch(removeAdmin());

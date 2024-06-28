@@ -12,7 +12,7 @@ function Payment() {
   const [book, setBook] = useState({ name: '', actor: '', posterUrl: '' });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/movie/getMovie/${id}`)
+    axios.get(`https://movie-villaback.vercel.app/movie/getMovie/${id}`)
       .then(res => setBook(res.data))
       .catch(error => {
         console.error('Error fetching movie details:', error);
@@ -21,7 +21,7 @@ function Payment() {
   }, [id]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/booking/read')
+    axios.get('https://movie-villaback.vercel.app/booking/read')
       .then(res => {
         setRates(res.data);
         setLoading(false); // Set loading to false after data is fetched
@@ -44,7 +44,7 @@ function Payment() {
       order_id: data.id,
       handler: async (response) => {
         try {
-          const verifyUrl = "http://localhost:3000/api/payment/verify";
+          const verifyUrl = "https://movie-villaback.vercel.app/api/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           console.log(data);
         } catch (error) {
@@ -61,7 +61,7 @@ function Payment() {
 
   const handlePayment = async (rate) => {
     try {
-      const orderUrl = "http://localhost:3000/api/payment/orders";
+      const orderUrl = "https://movie-villaback.vercel.app/api/payment/orders";
       const { data } = await axios.post(orderUrl, { amount: rate });
       console.log(data);
       initPayment(data.data);

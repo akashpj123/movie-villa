@@ -15,7 +15,7 @@ function Editmovie() {
 
   useEffect(() => {
     // Fetch the existing movie data
-    axios.get(`http://localhost:3000/movie/getMovie/${id}`)
+    axios.get(`https://movie-villaback.vercel.app/movie/getMovie/${id}`)
       .then(response => {
         const movie = response.data;
         setName(movie.name);
@@ -41,7 +41,7 @@ function Editmovie() {
       posterUrl,
     };
 
-    axios.put(`http://localhost:8000/movie/editMovie/${id}`, formData)
+    axios.put(`https://movie-villaback.vercel.app/movie/editMovie/${id}`, formData)
       .then(response => {
         console.log(response.data);
         navigate('/');

@@ -14,7 +14,7 @@ function Loginadmin() {
 
     const submit = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/admin/login', {
+            const response = await axios.post('https://movie-villaback.vercel.app/admin/login', {
                 email:email,
                 password:password
             });
