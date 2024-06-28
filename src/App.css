@@ -1,0 +1,56 @@
+ .ak{
+    background-image: url(./image/background.jpg);
+    display: flex;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    box-shadow: inset 0 0 2000px rgba(68, 0, 0, 0.5);
+  
+     
+ 
+}
+.aka{
+    background-image: url(./image/background.jpg);
+    display: flex;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    box-shadow: inset 0 0 2000px rgba(68, 0, 0, 0.5);
+   
+ 
+}
+.akkaaa{
+	background-image: url(./image/login.jpg);
+    display: flex;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    box-shadow: inset 0 0 2000px rgba(68, 0, 0, 0.5);
+
+}
+
+.akkaaaa{
+	background-image: url(./image/pexels-tima-miroshnichenko-7991486.jpg);
+    display: flex;
+    width:100%;
+    height:125vh;
+    background-size: cover;
+    box-shadow: inset 0 0 2000px rgba(68, 0, 0, 0.5);
+
+}
+.container{
+	flex-wrap: wrap;
+}
+
+
+
+.akkas{
+    background-image: url(./image/pexels-cottonbro-3945317.jpg);
+    display: flex;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    box-shadow: inset 0 0 2000px rgba(68, 0, 0, 0.5);
+
+ 
+}
